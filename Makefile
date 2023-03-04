@@ -29,12 +29,12 @@ $(NAME) : $(OBJS)
 clean :
 	@cd libft && make clean
 	@$(RM) $(OBJS)
+	@echo "clean executed"
 
-fclean :
-	@cd libft && make fclean
-	@$(RM) $(OBJS)
+fclean : clean
 	@$(RM) $(NAME)
 	@echo "$(NAME) deleted"
+	@echo "fclean executed"
 
 re : fclean all
 
